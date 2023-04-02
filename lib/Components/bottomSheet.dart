@@ -7,8 +7,8 @@ class bottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 65,
-      decoration: BoxDecoration(
+      height: 30,
+      decoration: const BoxDecoration(
           shape: BoxShape.rectangle,
           color: Color(0xff534C3A),
           boxShadow: [
@@ -17,7 +17,6 @@ class bottomSheet extends StatelessWidget {
             )
           ]
       ),
-
       margin: EdgeInsets.fromLTRB(0, 0, 0, 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -29,7 +28,7 @@ class bottomSheet extends StatelessWidget {
           ),
           OutlinedButton(
               style:OutlinedButton.styleFrom(
-                  side: BorderSide(
+                  side: const BorderSide(
                     color: Color(0xffE2BF54),
                   ),
                 shape: StadiumBorder(),
@@ -41,12 +40,13 @@ class bottomSheet extends StatelessWidget {
                 print(width);
                 print(height);
               },
-              child: Text(
+              child: const Text(
                 'portfolio 2023-24',
                 style: TextStyle(
                   color: Color(0xffE2BF54),
                 ),
-              ))
+              ),
+          )
         ],
       ),
     );

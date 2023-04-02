@@ -102,6 +102,7 @@ class _educationScreenState extends State<educationScreen> {
           ),
           body: Container(
             width: double.infinity,
+            height: double.infinity,
             color: Color(0xff534C3A),
             child: SingleChildScrollView(
               child: Column(
