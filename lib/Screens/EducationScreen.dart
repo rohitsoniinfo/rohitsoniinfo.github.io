@@ -28,7 +28,8 @@ class _educationScreenState extends State<educationScreen> {
               preferredSize: Size.fromHeight(50),
               child:  Padding(
                 padding:  EdgeInsets.fromLTRB(20/1280*width, 20/1280*width, 0, 0),
-                child: SingleChildScrollView(
+                child: width>768?
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -38,11 +39,7 @@ class _educationScreenState extends State<educationScreen> {
                         buttonTextColor: kunSelectedButtonTextColor,
                         buttonBackGroundColor: kunSelectedButtonBackgroundColor,
                         func: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const aboutScreen(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, '/');
                         },
                       ),
                       myButton(
@@ -50,11 +47,7 @@ class _educationScreenState extends State<educationScreen> {
                         buttonTextColor: kselectedButtonTextColor,
                         buttonBackGroundColor: kselectedButtonBackgroundColor,
                         func: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const educationScreen(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, '/education');
                         },
                       ),
                       myButton(
@@ -62,11 +55,7 @@ class _educationScreenState extends State<educationScreen> {
                         buttonTextColor: kunSelectedButtonTextColor,
                         buttonBackGroundColor: kunSelectedButtonBackgroundColor,
                         func: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const projectsScreen(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, '/project');
                         },
                       ),
                       myButton(
@@ -74,11 +63,7 @@ class _educationScreenState extends State<educationScreen> {
                         buttonTextColor: kunSelectedButtonTextColor,
                         buttonBackGroundColor: kunSelectedButtonBackgroundColor,
                         func: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) => const contactScreen(),
-                            ),
-                          );
+                          Navigator.pushNamed(context, '/contact');
                         },
                       ),
                       SizedBox(
@@ -96,6 +81,43 @@ class _educationScreenState extends State<educationScreen> {
                       )
                     ],
                   ),
+                ):
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/');
+                        },
+                        icon:Icon(
+                      Icons.info ,
+                      color: kunSelectedButtonTextColor,
+                    )),
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/education');
+                        },
+                        icon:Icon(
+                      Icons.school,
+                      color: kselectedButtonTextColor,
+                    )),
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/project');
+                        },
+                        icon:Icon(
+                      Icons.work,
+                      color: kunSelectedButtonTextColor,
+                    )),
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/contact');
+                        },
+                        icon:Icon(
+                      Icons.contact_phone,
+                      color: kunSelectedButtonTextColor,
+                    ))
+                  ],
                 ),
               ),
             ),
@@ -105,7 +127,8 @@ class _educationScreenState extends State<educationScreen> {
             height: double.infinity,
             color: Color(0xff534C3A),
             child: SingleChildScrollView(
-              child: Column(
+              child: width>768?
+              Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   bigContainerForDesign(
@@ -215,6 +238,115 @@ class _educationScreenState extends State<educationScreen> {
                     height: 60,
                   ),
                 ],
+              ) :
+              Column(
+                children: [
+              AnimatedContainer(
+              margin: EdgeInsets.all(20),
+              //width: double.infinity,
+              //height: 150,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: kselectedButtonTextColor,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                  ),
+                ],
+              ),
+              // Define how long the animation should take.
+              duration: const Duration(seconds: 10),
+              // Provide an optional curve to make the animation feel smoother.
+              curve: Curves.bounceIn,
+              child: Column(
+                  children: [
+                    Container(
+                      width: 100,
+                      height: 100,
+                      decoration: BoxDecoration(
+                        //shape: BoxShape.circle,
+                          image: DecorationImage(
+                              image: AssetImage('assets/images/educationlogo/school.jpg')
+                          )
+                      ),
+                    ),
+                    Text(
+                      'School : Saraswati Vidhya Mandir',
+                      style: TextStyle(
+                        color: Colors.white,
+                        //fontSize: 35/1280*width,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.normal,
+                      ),
+                    ),
+                    Text(
+                      'Year 2006-2020',
+                      style:  TextStyle(
+                        color: Colors.black,
+                        //fontSize: 25/1280*width,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.normal,
+                      ),
+                    ),
+                  ]
+              ),
+            ),
+                  AnimatedContainer(
+                    margin: EdgeInsets.all(20),
+                    //width: double.infinity,
+                    //height: 150,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: kselectedButtonTextColor,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey,
+                        ),
+                      ],
+                    ),
+                    // Define how long the animation should take.
+                    duration: const Duration(seconds: 10),
+                    // Provide an optional curve to make the animation feel smoother.
+                    curve: Curves.bounceIn,
+                    child: Column(
+                        children: [
+                          Container(
+                            width: 100,
+                            height: 100,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage('assets/images/educationlogo/college.jpg')
+                                )
+                            ),
+                          ),
+                          Text(
+                            'College : Lakshmi Narain College  of Technology Bhopal',
+                            //maxLines: 3,
+                            //overflow: TextOverflow.ellipsis,
+                            //softWrap: true,
+                            style: TextStyle(
+                              color: Colors.white,
+                              //fontSize: 35/1280*width,
+                              fontWeight: FontWeight.bold,
+                              fontStyle: FontStyle.normal,
+                            ),
+                          ),
+                          Text(
+                            'Year 2021-2025',
+                            style:  TextStyle(
+                              color: Colors.black,
+                              //fontSize: 25/1280*width,
+                              fontWeight: FontWeight.bold,
+                              fontStyle: FontStyle.normal,
+                            ),
+                          ),
+                        ]
+                    ),
+                  ),
+                SizedBox(
+                  height: 60,
+                ),
+              ],
               ),
             ),
           ),

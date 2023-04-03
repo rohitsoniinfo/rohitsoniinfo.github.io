@@ -46,7 +46,8 @@ class _aboutScreenState extends State<aboutScreen> {
           preferredSize: Size.fromHeight(50),
           child: Padding(
             padding: EdgeInsets.fromLTRB(20, 20, 0, 0),
-            child: width>768? SingleChildScrollView(
+            child: width>768?
+            SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -56,7 +57,7 @@ class _aboutScreenState extends State<aboutScreen> {
                     buttonTextColor: Color(0xffE2BF54),//selectedButtonTextColor,
                     buttonBackGroundColor: Color(0xff474644),//Colors.black,//kselectedButtonBackgroundColor,
                     func: () {
-                      Navigator.pushNamed(context, '/about');
+                      Navigator.pushNamed(context, '/');
                     },
                   ),
                   myButton(
@@ -94,25 +95,42 @@ class _aboutScreenState extends State<aboutScreen> {
                   )
                 ],
               ),
-            ):  Row(
+            )  :
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                IconButton(onPressed: (){}, icon:Icon(
-                  Icons.info ,
-                  color: kselectedButtonTextColor,
-                )),
-                IconButton(onPressed: (){}, icon:Icon(
-                  Icons.school,
-                  color: kunSelectedButtonTextColor,
-                )),
-                IconButton(onPressed: (){}, icon:Icon(
-                  Icons.work,
-                  color: kunSelectedButtonTextColor,
-                )),
-                IconButton(onPressed: (){}, icon:Icon(
-                  Icons.contact_phone,
-                  color: kunSelectedButtonTextColor,
-                ))
+                IconButton(
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/');
+                    },
+                    icon:Icon(
+                      Icons.info ,
+                      color: kselectedButtonTextColor,
+                    )),
+                IconButton(
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/education');
+                    },
+                    icon:Icon(
+                      Icons.school,
+                      color: kunSelectedButtonTextColor,
+                    )),
+                IconButton(
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/project');
+                    },
+                    icon:Icon(
+                      Icons.work,
+                      color: kunSelectedButtonTextColor,
+                    )),
+                IconButton(
+                    onPressed: (){
+                      Navigator.pushNamed(context, '/contact');
+                    },
+                    icon:Icon(
+                      Icons.contact_phone,
+                      color: kunSelectedButtonTextColor,
+                    ))
               ],
             ),
           ),
@@ -130,8 +148,8 @@ class _aboutScreenState extends State<aboutScreen> {
           child: Column(
             children: [
               Container(
-                width: 200,
-                height: 200,
+                width: width>768? 200: 400,
+                height: width>768? 200: 400,
                 margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
@@ -149,7 +167,7 @@ class _aboutScreenState extends State<aboutScreen> {
                   style: TextStyle(
                     fontWeight: FontWeight.normal,
                     fontStyle: FontStyle.normal,
-                    fontSize: 40,
+                    fontSize: width>768 ? 40 : 80,
                     color: Color(0xffE2BF54),
                   ),
                 ),
@@ -165,7 +183,7 @@ class _aboutScreenState extends State<aboutScreen> {
                         textStyle: TextStyle(
                           fontWeight: FontWeight.normal,
                           fontStyle: FontStyle.normal,
-                          fontSize: 20,
+                          fontSize: width>768 ? 20:40,
                           color: Colors.grey,
                         ),
                       ),

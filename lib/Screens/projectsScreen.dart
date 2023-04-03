@@ -1,3 +1,4 @@
+import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:portfolio/Components/myButton.dart';
 import 'package:portfolio/Components/projectDetails.dart';
@@ -40,7 +41,8 @@ class _projectsScreenState extends State<projectsScreen> {
               preferredSize: const Size.fromHeight(50),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
-                child: SingleChildScrollView(
+                child:width>768?
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -108,6 +110,43 @@ class _projectsScreenState extends State<projectsScreen> {
                       )
                     ],
                   ),
+                ) :
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/');
+                        },
+                        icon:Icon(
+                          Icons.info ,
+                          color: kunSelectedButtonTextColor,
+                        )),
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/education');
+                        },
+                        icon:Icon(
+                          Icons.school,
+                          color: kunSelectedButtonTextColor,
+                        )),
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/project');
+                        },
+                        icon:Icon(
+                          Icons.work,
+                          color: kselectedButtonTextColor,
+                        )),
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/contact');
+                        },
+                        icon:Icon(
+                          Icons.contact_phone,
+                          color: kunSelectedButtonTextColor,
+                        ))
+                  ],
                 ),
               ),
             ),

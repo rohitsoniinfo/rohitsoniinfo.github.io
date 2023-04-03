@@ -33,7 +33,8 @@ class _contactScreenState extends State<contactScreen> {
               preferredSize: Size.fromHeight(50),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(20, 20, 0, 0),
-                child: SingleChildScrollView(
+                child: scwWdth>768 ?
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -97,6 +98,43 @@ class _contactScreenState extends State<contactScreen> {
                       )
                     ],
                   ),
+                ) :
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/');
+                        },
+                        icon:Icon(
+                          Icons.info ,
+                          color: kunSelectedButtonTextColor,
+                        )),
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/education');
+                        },
+                        icon:Icon(
+                          Icons.school,
+                          color: kunSelectedButtonTextColor,
+                        )),
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/project');
+                        },
+                        icon:Icon(
+                          Icons.work,
+                          color: kunSelectedButtonTextColor,
+                        )),
+                    IconButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/contact');
+                        },
+                        icon:Icon(
+                          Icons.contact_phone,
+                          color: kselectedButtonTextColor,
+                        ))
+                  ],
                 ),
               ),
             ),
