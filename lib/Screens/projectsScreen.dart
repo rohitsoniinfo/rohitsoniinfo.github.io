@@ -186,7 +186,7 @@ class _projectsScreenState extends State<projectsScreen> {
                     'https://github.com/rohitsoniinfo/Weather-App',
                   ),
                   Container(
-                    width: 600/1280*width,
+                    width: width>768 ? 600/1280*width: double.infinity,
                     //height: 650,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
@@ -197,8 +197,7 @@ class _projectsScreenState extends State<projectsScreen> {
                         Column(
                           children: [
                             Container(
-                              width: 600/1280*width,
-                              height: 400,
+                              width: width>768 ? 600/1280*width: double.infinity,                              height: 400,
                               decoration: const BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage(

@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'dart:html' as html;
+
 class actualPortfolioSiteButton extends StatelessWidget {
   actualPortfolioSiteButton({required this.image,required this.siteName,required this.siteLink});
   final AssetImage image;
   final String siteName;
   final String siteLink;
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +16,8 @@ class actualPortfolioSiteButton extends StatelessWidget {
       child: Row(
         children: [
           Container(
-            width: 50/1280*scwWdth,
-            height: 50/700*scHeight,
+            width: 50,
+            height: 50,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: image,
@@ -36,7 +35,7 @@ class actualPortfolioSiteButton extends StatelessWidget {
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
-                  fontSize: 30/1280*scwWdth,
+                  fontSize: 30,//1280*scwWdth,
                 ),
               ),
               style: ButtonStyle(

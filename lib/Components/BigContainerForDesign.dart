@@ -15,7 +15,7 @@ class bigContainerForDesign extends StatelessWidget {
     return AnimatedContainer(
       margin: EdgeInsets.all(20),
       width: width/1280*scwWdth,
-      height: height/700*scHeight,
+      //height: height/700*scHeight,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
         color: color,

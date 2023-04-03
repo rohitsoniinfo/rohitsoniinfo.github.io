@@ -147,6 +147,7 @@ class _contactScreenState extends State<contactScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   bigContainerForDesign(
+                    width: double.infinity,
                   color:Color(0xffE2BF54), //Colors.yellow,//Color(0x93A53CC7),
                   itemsWidget:  Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -180,8 +181,10 @@ class _contactScreenState extends State<contactScreen> {
                   ),
                     ),
                   bigContainerForDesign(
+                    width: double.infinity,
                       color: Color(0xffE2BF54),
                       itemsWidget: Column(
+
                         children: [
                           //facebook
                           Padding(
@@ -281,9 +284,18 @@ class _contactScreenState extends State<contactScreen> {
                       ),
                   ),
                   bigContainerForDesign(
+                    width: double.infinity,
                     color: Color(0xffE2BF54),
                     itemsWidget:  Column(
                     children: [
+                      Text(
+                      'Contact me :) ',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: TextFormField(
