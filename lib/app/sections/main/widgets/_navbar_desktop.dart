@@ -27,7 +27,7 @@ class _NavbarDesktopState extends State<_NavbarDesktop> {
                     index: e.key,
                   ),
                 ),
-            // Space.x!,
+             //Space.x!,
             InkWell(
                 onTap: () {
                   context.read<ThemeCubit>().updateTheme(!state.isDarkThemeOn);
@@ -74,3 +74,4 @@ class _NavBarTablet extends StatelessWidget {
     );
   }
 }
+

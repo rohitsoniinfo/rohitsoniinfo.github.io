@@ -37,7 +37,8 @@ class HomeDesktop extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(hellotag,
+                      Text(
+                          hellotag,
                           style: const TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w100,
@@ -51,7 +52,8 @@ class HomeDesktop extends StatelessWidget {
                     ],
                   ),
                   Space.y(0.5.w)!,
-                  Text(yourname,
+                  Text(
+                      yourname,
                       style: const TextStyle(
                         fontSize: 50,
                         fontWeight: FontWeight.w600,
@@ -74,7 +76,8 @@ class HomeDesktop extends StatelessWidget {
                   Space.y(1.5.w)!,
                   Padding(
                     padding: EdgeInsets.only(right: 10.w),
-                    child: Text(miniDescription,
+                    child: Text(
+                        miniDescription,
                         style: TextStyle(
                           fontSize: isFontSize(context, 20),
                           fontWeight: FontWeight.w400,

@@ -3,13 +3,16 @@ import 'package:mysite/changes/strings.dart';
 import 'package:mysite/core/configs/configs.dart';
 
 List<TyperAnimatedText> desktopList = [
-  TyperAnimatedText(animationtxt1,
+  TyperAnimatedText(
+      animationtxt1,
       speed: const Duration(milliseconds: 50),
       textStyle: AppText.h2!.copyWith(fontSize: 32)),
-  TyperAnimatedText(animationtxt2,
+  TyperAnimatedText(
+      animationtxt2,
       speed: const Duration(milliseconds: 50),
       textStyle: AppText.h2!.copyWith(fontSize: 32)),
-  TyperAnimatedText(animationtxt3,
+  TyperAnimatedText(
+      animationtxt3,
       speed: const Duration(milliseconds: 50),
       textStyle: AppText.h2!.copyWith(fontSize: 32))
 ];

@@ -1,38 +1,28 @@
 // CV
 const String resume =
-    'https://drive.google.com/file/d/1bDNNrkQtNVJbXcdwMSx0crQQvAF_nMwV/view?usp=sharing';
+    'https://drive.google.com/file/d/11EBkYTsv6ER4Wdcz9080KfFcifPCmaGL/view?usp=sharing';
 
 // Github Link
-const String gitHub = 'https://github.com/sudeshnb';
+const String gitHub = 'https://github.com/rohitsoniinfo';
 // Github Link
-const String facebook = 'https://facebook.com/sudeshnb';
+const String facebook = 'https://facebook.com';
 // Github Link
-const String twitter = 'https://twitter.com/sudesh78';
+const String twitter = 'https://twitter.com/Rohitsoni_info/';
 // Github Link
 const String youtube =
-    'https://www.youtube.com/channel/UCXooUY2oL_eqGhTaZn-ExSg';
+    'https://www.youtube.com/@rohitsoni5491';
 // Github Link
-const String linkedin = 'https://linkedin.com/in/sudeshnb';
+const String linkedin = 'https://www.linkedin.com/in/rohitsoni18/';
 // Github Link
-const String buymeacoffee = 'https://www.buymeacoffee.com/sudeshnb';
+const String buymeacoffee = 'https://www.buymeacoffee.com';
 // Github Link
-const String instagram = 'https://instagram.com/sudesh_nish';
-// socialLinks
-// const List<String> socialLinks = [
-//   "https://facebook.com/sudeshnb",
-//   // "https://instagram.com/sudesh_nish",
-//   "https://www.youtube.com/channel/UCXooUY2oL_eqGhTaZn-ExSg",
-//   "https://twitter.com/sudesh78",
-//   "https://linkedin.com/in/sudeshnb",
-//   "https://www.buymeacoffee.com/sudeshnb", "https://github.com/sudeshnb",
-// ];
-//
+const String instagram = 'https://www.instagram.com/__rohitsoni/';
 const String profileImage =
-    "https://images.unsplash.com/photo-1503443207922-dff7d543fd0e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80";
+    "https://avatars.githubusercontent.com/u/92707347?s=400&u=e85658cf2a6393e8a5016e4323fa000db3dab2e1&v=4";
 //
 // Github Link
-const String fiverr = 'https://www.fiverr.com/sudeshnb';
+const String fiverr = 'https://www.fiverr.com/';
 // Github Link
-const String upwork = 'https://www.upwork.com/freelancers/~015c46144016569e31';
+const String upwork = 'https://www.upwork.com/freelancers/';
 // Github Link
-const String whatsapp = 'https://api.whatsapp.com/send?phone=94741325674';
+const String whatsapp = 'https://api.whatsapp.com/send?phone=916263967384';

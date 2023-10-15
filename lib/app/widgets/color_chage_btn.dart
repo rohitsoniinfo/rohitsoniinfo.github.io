@@ -189,7 +189,10 @@ class _DesktopCCButtonState extends State<DesktopCCButton> {
             height: 65,
             width: 250,
             decoration: BoxDecoration(
-              border: Border.all(color: theme.textColor, width: 3),
+              border: Border.all(
+                  color: theme.textColor,
+                  width: 3,
+              ),
               borderRadius: BorderRadius.circular(6),
             ),
           ),
